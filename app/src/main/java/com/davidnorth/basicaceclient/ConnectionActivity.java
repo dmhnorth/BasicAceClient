@@ -1,6 +1,7 @@
 package com.davidnorth.basicaceclient;
 
 import android.app.Activity;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,13 +22,17 @@ public class ConnectionActivity extends Activity {
         //TODO not allowed to run network connections in the UI thread
         //http://www.androiddesignpatterns.com/2012/06/app-force-close-honeycomb-ics.html
 
-//        simpleAndroidClient.launch();
+        AsyncTask connect = new AsyncTask() {
+            @Override
+            protected Object doInBackground(Object[] params) {
+            simpleAndroidClient.launch();
+                return null;
+            }
+        };
 
+        connect.execute();
 
     }
-
-
-
 
 
 

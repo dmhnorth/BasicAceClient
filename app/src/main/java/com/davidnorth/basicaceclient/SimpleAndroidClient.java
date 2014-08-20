@@ -21,6 +21,7 @@ public class SimpleAndroidClient {
     private String responseString = "currently unset";
 
 
+
     public void launch() {
 
         Log.i("Launch:", "is running");
