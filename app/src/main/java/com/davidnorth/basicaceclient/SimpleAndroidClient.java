@@ -15,8 +15,12 @@ import java.io.IOException;
  */
 public class SimpleAndroidClient {
 
-    //This is the address that can be used to access the emulator on a local host
-    private String localAddress = "http://10.0.2.2:4567";
+    //The address that can be used to access the emulator on a local host
+    private String networkAddress = "http://10.0.2.2:4567";
+
+    //The address for connecting via the internet on a physical device
+//    private String networkAddress = "http://";
+
     private String responseCode = "currently unset";
     private String responseString = "currently unset";
 
@@ -28,7 +32,7 @@ public class SimpleAndroidClient {
         AndroidHttpClient androidHttpClient = AndroidHttpClient.newInstance("defaultAgentName");
 
         //Recreates the curl, or browser call
-        HttpGet httpGet = new HttpGet(localAddress + "/hello");
+        HttpGet httpGet = new HttpGet(networkAddress + "/hello");
 
         //Now do the request
         try {
