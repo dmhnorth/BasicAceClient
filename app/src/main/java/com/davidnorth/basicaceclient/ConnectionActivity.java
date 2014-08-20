@@ -19,7 +19,7 @@ public class ConnectionActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connection);
 
-        //TODO not allowed to run network connections in the UI thread
+        //Runs the connection to the network on a thread separate to the UI thread.
         //http://www.androiddesignpatterns.com/2012/06/app-force-close-honeycomb-ics.html
 
         AsyncTask connect = new AsyncTask() {
@@ -29,9 +29,7 @@ public class ConnectionActivity extends Activity {
                 return null;
             }
         };
-
         connect.execute();
-
     }
 
 
