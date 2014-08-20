@@ -46,6 +46,8 @@ public class SimpleAndroidClient {
 
         } catch (IOException e) {
             e.printStackTrace();
+            responseCode = "didn't retrieve. Check Logcat stacktrace";
+            responseString = "didn't retrieve. Check Logcat stacktrace";
         } finally {
             androidHttpClient.close();
         }
