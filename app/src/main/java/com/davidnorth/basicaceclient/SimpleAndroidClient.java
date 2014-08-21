@@ -16,10 +16,10 @@ import java.io.IOException;
 public class SimpleAndroidClient {
 
     //The address that can be used to access the emulator on a local host
-    private String networkAddress = "http://10.0.2.2:4567";
+//    private String networkAddress = "http://10.0.2.2:4567";
 
     //The address for connecting via the internet on a physical device
-//    private String networkAddress = "http://";
+    private String networkAddress = "http://aceclassroomextension.herokuapp.com";
 
     private String responseCode = "currently unset";
     private String responseString = "currently unset";
